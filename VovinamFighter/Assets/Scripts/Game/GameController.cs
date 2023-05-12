@@ -21,9 +21,9 @@ namespace Game
         private void PlayerOneMove()
         {
             var horizontal = Input.GetAxisRaw(Constants.Horizontal);
-            // var newPos = playerOne.position;
-            //
-            // newPos.x += horizontal * Time.deltaTime * model.PlayerMoveSpeed;
+            var newPos = playerOne.position;
+            
+            newPos.x += horizontal * Time.deltaTime * model.PlayerMoveSpeed;
             if (Mathf.Abs(horizontal) > 0)
             {
                 playerAnimationController.ChangeAnimation(horizontal > 0
@@ -34,7 +34,7 @@ namespace Game
             {
                 playerAnimationController.ChangeAnimation(AnimationState.Idle);
             }
-            // playerOne.position = newPos;
+            playerOne.position = newPos;
         }
         
         

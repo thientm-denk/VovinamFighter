@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261f12404b154126a0cbb1120ca9f78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoveSpeed: 2
+  playerMoveSpeed: 1
 --- !u!4 &819896599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5077735781807284306, guid: f5f593165a7dc494fafab0f8224d6590, type: 3}

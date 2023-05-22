@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game
 {
-    public class GameController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         [SerializeField] private GameModel model;
         [SerializeField] private GameView view;

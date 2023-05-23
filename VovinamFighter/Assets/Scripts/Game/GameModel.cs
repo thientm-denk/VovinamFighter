@@ -10,6 +10,7 @@ namespace Game
         StraightHand,
         Kick,
         KnockDown,
+        Hook,
     }
     public class GameModel : MonoBehaviour
     {

@@ -34,15 +34,15 @@ namespace Game
                     PlayerOneMove();
                     break;
                 case PlayerState.StraightHand:
-                    
                     AttackStraightHand();
                     break;
                 case PlayerState.Kick:
-                    
                     AttackKick();
                     break;
+                case PlayerState.Hook:
+                    AttackHook();
+                    break;
                 case PlayerState.KnockDown:
-                    
                     playerAnimationController.ChangeAnimation(PlayerState.KnockDown);
                     break;
             }
@@ -80,7 +80,13 @@ namespace Game
                 playerOneState = PlayerState.Kick;
                 return;
             }
-
+            // player attack2
+            var input3 = Input.GetAxisRaw(Constants.Hook);
+            if (input3 > 0)
+            {
+                playerOneState = PlayerState.Hook;
+                return;
+            }
         }
 
         private void PlayerOneMove()
@@ -121,6 +127,14 @@ namespace Game
                 playerOneState = PlayerState.Idle;
             }
         }
-        
+        private void AttackHook()
+        {
+            playerAnimationController.ChangeAnimation(PlayerState.Hook);
+            _timer += Time.deltaTime;
+            if (_timer >= 0.7f)
+            {
+                playerOneState = PlayerState.Idle;
+            }
+        }
     }
 }
